@@ -58,12 +58,14 @@
 
     <!-- Simple Header -->
     <header class="bg-team-navy text-white shadow-md">
-        <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row justify-between items-center">
+        <!-- flex-rowとjustify-betweenを削除し、一律で中央揃えに変更 -->
+        <div class="container mx-auto px-6 py-4 flex flex-col items-center text-center">
             <h1 class="text-xl font-bold tracking-tight">
                 <i class="fa-solid fa-baseball-bat-ball text-team-gold mr-2"></i>
-                千葉北リトルシニア 41期
+                千葉北リトルシニア 41期 記念サイト
             </h1>
-            <p class="text-xs text-gray-300 mt-1 md:mt-0 font-light">2024.04 - 2026.03 MEMORIAL ARCHIVES</p>
+            <!-- mt-2を設定してタイトルとの間隔を調整し、常に改行されるように配置 -->
+            <p class="text-xs text-gray-300 mt-2 font-light uppercase tracking-widest">2023.05 - 2026.02 MEMORIAL ARCHIVES</p>
         </div>
     </header>
 
@@ -172,3 +174,4 @@
 
 </body>
 </html>
+
