@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chibakita Little Senior 41st Memorial</title>
+    
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Tailwind CSS (CDN) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        team: {
+                            navy: '#09294f',
+                            red: '#9c3327',
+                            gold: '#b99c56',
+                            gray: '#4f4c4c',
+                            light: '#f3f4f6',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background-color: #f3f4f6;
+        }
+        .album-link:hover {
+            background-color: #fdf2f2;
+            border-color: #9c3327;
+            color: #9c3327;
+        }
+        .main-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .main-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans text-team-gray min-h-screen flex flex-col">
+
+    <!-- Simple Header -->
+    <header class="bg-team-navy text-white shadow-md">
+        <!-- flex-rowとjustify-betweenを削除し、一律で中央揃えに変更 -->
+        <div class="container mx-auto px-6 py-4 flex flex-col items-center text-center">
+            <h1 class="text-xl font-bold tracking-tight">
+                <i class="fa-solid fa-baseball-bat-ball text-team-gold mr-2"></i>
+                千葉北リトルシニア 41期
+            </h1>
+            <!-- mt-2を設定してタイトルとの間隔を調整し、常に改行されるように配置 -->
+            <p class="text-xs text-gray-300 mt-2 font-light uppercase tracking-widest">2024.04 - 2026.03 MEMORIAL ARCHIVES</p>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="flex-grow container mx-auto px-4 pt-6 pb-4 max-w-5xl">
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+            
+            <!-- Card 1: Match Archives -->
+            <a href="match_results.html" class="main-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 group h-full flex flex-col">
+                <div class="h-3 bg-team-navy"></div>
+                <div class="p-8 grow">
+                    <!-- Updated Title Layout to match Photo Gallery -->
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mr-2 group-hover:bg-blue-50 transition-colors">
+                            <i class="fa-solid fa-file-lines text-2xl text-team-navy"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-team-navy">試合・スコア記録</h2>
+                    </div>
+
+                    <div class="flex flex-col items-center text-center">
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">
+                            公式戦・OP戦の記録。<br>スコア画像や試合動画など。
+                        </p>
+                        <div class="mt-auto inline-flex items-center text-team-red font-bold">
+                            アーカイブを見る
+                            <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <!-- Card 2: Photo Gallery (with links) -->
+            <div class="main-card bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-200 h-full flex flex-col">
+                <div class="h-3 bg-team-red"></div>
+                <div class="p-8">
+                    <div class="flex items-center justify-center mb-6">
+                        <div class="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mr-2">
+                            <i class="fa-solid fa-images text-2xl text-team-red"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold text-team-navy">フォトギャラリー</h2>
+                    </div>
+                    
+                    <p class="text-gray-500 text-sm text-center mb-6">Google フォトアルバムへジャンプします</p>
+
+                    <!-- Album Links List -->
+                    <div class="space-y-2">
+                        <a href="https://photos.app.goo.gl/6QDLbuTtgiuuW8Ro7" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all bg-gray-50/50">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>親子試合(1年生)</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/PcM3x23p9r85EW5V6" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>合宿</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/rmB7NupnFFafU3oT6" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all bg-gray-50/50">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>グランド開き</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/s8TfSY5RBGQzgjvM9" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all bg-gray-50/50">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>オーシャンカップ</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/8oFXujBMK6m5525i8" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>マリーンズ杯開会式</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/mgVyLEpXqHFGrVZg8" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>マリーンズ杯フォトブック</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/GoEtdiMoPqXGGk6L6" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all bg-gray-50/50">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>OB戦</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/3VV8aHrKheFZE7hc6" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>卒部親子試合</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://kita2025.my.canva.site/2025-41" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>卒部式サイト<br>パスワード：cbkt2025</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/uowKGEk77pmVpXwRA" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>卒部式</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/KbcBeyPX7rL4pVMg7" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all bg-gray-50/50">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>卒部アルバム</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                        <a href="https://photos.app.goo.gl/zdQZJytujMGj8o6U6" target="_blank" class="album-link flex items-center justify-between p-3 border border-gray-100 rounded-lg text-sm transition-all">
+                            <span class="flex items-center"><i class="fa-regular fa-folder-open mr-3 opacity-50"></i>スナップ動画</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square text-[10px] opacity-30"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-gray-200 py-8 mt-4">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-xs text-gray-400">&copy; 2026 The 41st of ChibakitaLittleSenior Memorial Archives.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
